@@ -1,20 +1,21 @@
 :root {}
 
+/* ADD MEDIA QUERY:::: CARLEFT AND CUSTOMER LEFT BECOMES 50%*/
 form>.left {
     background-color: red;
 
-
-    >.carDiv {
+    >.carDiv, .workDiv {
         background-color: inherit;
         display: flex;
         flex-wrap: wrap;
-        padding: 10px 8px;       
+        padding: 10px 8px;
         text-align: left;
-        >.carLeft{
+        >.carLeft, .workLeft {
             width: 40%;
 
         }
-        >.carRight {
+
+        >.carRight, .workRight {
             width: 50%;
         }
     }
@@ -27,12 +28,14 @@ form>.left {
         background-color: inherit;
         display: flex;
         flex-wrap: wrap;
-        padding: 10px 8px;       
+        padding: 10px 8px;
         text-align: left;
-        >.customerLeft{
+
+        >.customerLeft {
             width: 40%;
 
         }
+
         >.customerRight {
             width: 50%;
         }
@@ -43,10 +46,11 @@ form>.left {
     }
 }
 
-input {
+input,textarea {
     margin: 0px 20px;
     padding: 5px 40px;
 }
+
 label {
     display: flex;
     flex-direction: row;
@@ -55,4 +59,8 @@ label {
     line-height: 26px;
     margin-bottom: 10px;
     font-size: 20px;
+}
+
+textarea {
+    resize: none;
 }

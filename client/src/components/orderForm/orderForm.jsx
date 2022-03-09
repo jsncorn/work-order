@@ -15,7 +15,7 @@ const Orderform = () => {
                 <div className='left'>
 
                     <div className='carDiv'>
-                    <h3 style={{width: '100%'}}>Car Information</h3>
+                        <h3 style={ { width: '100%' } }>Car Information</h3>
                         <div className='carLeft'>
                             <div className='col-12'>
                                 <label>Year:
@@ -53,7 +53,7 @@ const Orderform = () => {
                     </div>
 
                     <div className='customerDiv'>
-                    <h3 style={{width: '100%'}}>Customer Information</h3>
+                        <h3 style={ { width: '100%' } }>Customer Information</h3>
                         <div className='customerLeft'>
                             <div className='col-12'>
                                 <label>Name:
@@ -68,29 +68,46 @@ const Orderform = () => {
                         </div>
                         <div className='customerRight'>
                             <div className='col-12'>
-                                <label>Street
+                                <label>Street:
                                     <input name="customerSt" />
                                 </label>
                             </div>
                             <div className='col-12'>
-                                <label>City
+                                <label>City:
                                     <input name="customerCity" />
                                 </label>
                             </div>
                             <div className='col-12'>
-                                <label>State
+                                <label>State:
                                     <input name="customerState" />
                                 </label>
                             </div>
                             <div className='col-12'>
-                                <label>ZIP
+                                <label>ZIP:
                                     <input name="customerZip" />
                                 </label>
                             </div>
                         </div>
                     </div>
-                    <div className='col-12'>
-                        <textarea name="workSum" placeholder="work order summary" />
+                    <div className='workDiv'>
+                        <h3 style={ { width: '100%' } }>Work Order</h3>
+                        <div className='workLeft'>
+                            <div className='col-12'>
+                                <label>Summary:
+                                    <textarea name="workSum"  />
+                                </label>
+                            </div>
+                        </div>
+                        <div className='workRight'>
+                            <div className='col-12'>
+                                <label>Estimate:
+                                    <input name="workEst" />
+                                </label>
+                                <label>Done by:
+                                    <input name="employeeWork" />
+                                </label>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </form>
