@@ -10,11 +10,30 @@ form>.left {
         flex-wrap: wrap;
         padding: 10px 8px;       
         text-align: left;
-        >.carLeft {
+        >.carLeft{
             width: 40%;
 
         }
         >.carRight {
+            width: 50%;
+        }
+    }
+
+    >.customerDiv {
+        background-color: green;
+    }
+
+    >.customerDiv {
+        background-color: inherit;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px 8px;       
+        text-align: left;
+        >.customerLeft{
+            width: 40%;
+
+        }
+        >.customerRight {
             width: 50%;
         }
     }
