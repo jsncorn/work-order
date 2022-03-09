@@ -1,5 +1,5 @@
 import './App.css';
-import orderForm from './orderForm/orderForm';
+import orderForm from './components/orderForm/orderForm';
 import topBar from './components/topBar/topBar';
 
 
