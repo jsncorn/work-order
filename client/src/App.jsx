@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import OrderForm from './components/orderForm/orderForm';
 import Topbar from './components/topBar/topBar';
 
