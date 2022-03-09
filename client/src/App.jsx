@@ -1,13 +1,13 @@
 import './App.css';
-import orderForm from './components/orderForm/orderForm';
-import topBar from './components/topBar/topBar';
+import OrderForm from './components/orderForm/orderForm';
+import Topbar from './components/topBar/topBar';
 
 
 function App() {
   return (
     <div className="App">
-      <topBar/>
-      <orderForm/>
+      <Topbar />
+      <OrderForm />
     </div>
   );
 }
