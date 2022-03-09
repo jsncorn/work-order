@@ -1,14 +1,13 @@
 import './App.css';
 import orderForm from './orderForm/orderForm';
-import topBar from './topBar/topBar';
+import topBar from './components/topBar/topBar';
 
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-
-      </header>
+      <topBar/>
+      <orderForm/>
     </div>
   );
 }
