@@ -59,6 +59,14 @@ export default function Signup(props) {
             <Link className='link' to="/signup">← Go to Signup</Link>
             <button type="submit">Login</button>
           </div>
+          {error ? (
+          <div>
+            <p className="error-text">The provided credentials are incorrect</p>
+          </div>
+        ) : null}
+        <div className="flex-row flex-end">
+          <button type="submit">Submit</button>
+        </div>
         </form>
       </div>
     </div>
