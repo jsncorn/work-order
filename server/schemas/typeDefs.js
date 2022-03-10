@@ -1,6 +1,8 @@
-const { gql } = require('apollo-server-express');
+const {
+    gql
+} = require('apollo-server-express');
 
-const typeDefs = gql`
+const typeDefs = gql `
 type Order {
     _id: ID
     carYear: Int
