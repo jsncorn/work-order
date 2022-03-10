@@ -6,6 +6,7 @@ import './App.scss';
 import OrderForm from './pages/orderForm/orderForm';
 import Topbar from './components/topBar/topBar';
 import Home from './pages/Home/Home';
+import Signup from './pages/Signup/Signup';
 
 import { useState } from 'react';
 import SingleOrder from './pages/singleOrder/singleOrder';
@@ -29,8 +30,8 @@ function App() {
             <Routes>
               <Route path='/' element={ <Home /> } />
               <Route path='/newform' element={ <OrderForm /> } />
-              <Route path="/orders/:orderId" element={<SingleOrder />} 
-              />
+              <Route path="/orders/:orderId" element={<SingleOrder />} />
+              <Route path='/signup' element={<Signup/>} />  
             </Routes>
           </div>
         </div>
