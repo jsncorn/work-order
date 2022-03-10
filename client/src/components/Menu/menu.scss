@@ -1,0 +1,39 @@
+.navMenu {
+    width: 150px;
+    height: 300px;
+    background-color: white;
+    position: fixed;
+    top: -500px;
+    right: 0px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s ease;
+}
+
+.navMenu.active {
+    top: 70px;
+}
+
+ul {
+    top: 25px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 30px;
+    font-weight: 500;
+    overflow: hidden;
+}
+
+li,
+a {
+    color: green;
+    text-decoration: none;
+    margin: 20px;
+}
+
+a:hover {
+    font-weight: bold;
+}
