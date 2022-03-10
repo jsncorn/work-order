@@ -64,9 +64,6 @@ export default function Signup(props) {
             <p className="error-text">The provided credentials are incorrect</p>
           </div>
         ) : null}
-        <div className="flex-row flex-end">
-          <button type="submit">Submit</button>
-        </div>
         </form>
       </div>
     </div>

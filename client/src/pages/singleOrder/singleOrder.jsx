@@ -14,33 +14,37 @@ const SingleOrder = () => {
 
     const order = data?.order || {};
 
-    console.log(order)
-
     if (loading) {
         return <div> LOADING... </div>;
+    }
+
+    const CarTab = ({ data }) => {
+        return (
+            <table border="1">
+                { Object.keys(data).map(key => {
+                    return (
+                        <tr>
+                            <td width="10%">
+                                <div class="carTable">
+                                    <scan>{key}</scan>
+                                </div>
+                            </td>
+                            <td width="20%">
+                                <div class="carTable">
+                                    <scan>{data[key]}</scan>
+                                </div>
+                            </td>
+                        </tr>
+                    )
+                }) }
+            </table>
+        )
     }
 
     return (
         <div className="soMain">
             <div className="carSection">
-                <table>
-                { order.map(obj => {
-                        return (
-                            <tr>
-                                <td width="20%">
-                                    <div class="carTable">
-                                        <scan>Hi</scan>
-                                    </div>
-                                </td>
-                                <td width="20%">
-                                    <div class="carTable">
-                                        <scan>Bye</scan>
-                                    </div>
-                                </td>
-                            </tr>
-                        )
-                    }) }
-                </table>
+                <CarTab data={ order } />
             </div>
         </div>
     );

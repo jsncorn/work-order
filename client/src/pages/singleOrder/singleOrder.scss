@@ -6,7 +6,7 @@
 
 .carSection{
     position: relative;
-    border: 5px outset gray;
+    border: 5px outset white;
     text-align: center;
     font-size: large;
 }
@@ -14,6 +14,7 @@
 table .carTable{
     display: table;
     width: 100%;
+    text-align: left;
     float: right;
     position: relative;
     overflow: hidden;
