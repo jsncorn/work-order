@@ -14,5 +14,21 @@
         "custZip": "12345",
         "orderSum": "this is a list of things that need to be done to the car",
         "orderEst": "300"
+    },
+    {
+        "carYear": "2009",
+        "carMake": "Audi",
+        "carModel": "S5",
+        "carColor": "BLACK",
+        "carPlate": "7DAD333",
+        "carVin": "1GKKVNGDXCJ260718",
+        "custName": "jeremy",
+        "custNumber": "5103782706",
+        "custSt": "56789 Address St",
+        "custCity": "City1",
+        "custState": "State2",
+        "custZip": "12345",
+        "orderSum": "this is a list of things that need to be done to the car",
+        "orderEst": "300"
     }
 ]

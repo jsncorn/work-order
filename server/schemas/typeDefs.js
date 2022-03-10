@@ -12,14 +12,13 @@ type Order {
     carPlate: String
     carVin: String
     custName: String
-    custNumber: Int
+    custNumber: String
     custSt: String
     custCity: String
     custState: String
     custZip: Int
     orderSum: String
     orderEst: Int
-    doneBy: String
 }
 
 type Query {
@@ -36,14 +35,13 @@ type Mutation {
         carPlate: String!,
         carVin: String!,
         custName: String!,
-        custNumber: Int!,
+        custNumber: String!,
         custSt: String!,
         custCity: String!,
         custState: String!,
         custZip: Int!,
         orderSum: String!,
         orderEst: Int!,
-        doneBy: String!,
     ): Order
 
     removeOrder(orderId: ID!): Order

@@ -20,7 +20,6 @@ query getOrders {
         custZip
         orderSum
         orderEst
-        doneBy
     }
 }
 `;
@@ -43,7 +42,6 @@ query getSingleOrder($orderId: ID!) {
         custZip
         orderSum
         orderEst
-        doneBy
     }
 }
 `;

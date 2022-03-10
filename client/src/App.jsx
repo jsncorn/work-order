@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.scss';
 import OrderForm from './pages/orderForm/orderForm';
 import Topbar from './components/topBar/topBar';
-import Home from './pages/Home/home';
+import Home from './pages/Home/Home';
 
 import { useState } from 'react';
 

@@ -5,23 +5,17 @@ const {
 const resolvers = {
     Query: {
         orders: async () => {
-            return Order.find().sort({ doneBy: -1 });
+            return Order.find().sort({ carYear: -1 });
         },
-        order: async (_, { orderId }) => {
+        order: async (parent, { orderId }) => {
             return Order.findOne({ _id: orderId });
         }
     },
     Mutation: {
-        addOrder: async (_, { 
-            carYear, carMake, carModel, carColor, carPlate, carVin,
-            custName, custNumber, custSt, custCity, custState, custZip,
-            orderSum, orderEst, doneBy
-         }) => {
-             return Order.create({ carYear, carMake, carModel, carColor, carPlate, carVin,
-                custName, custNumber, custSt, custCity, custState, custZip,
-                orderSum, orderEst, doneBy })
-         },
-         removeOrder: async (_, { orderId }) => {
+        addOrder: async (parent, { carYear, carMake, carModel, carColor, carPlate, carVin, custName, custNumber, custSt, custCity, custState, custZip, orderSum, orderEst  }) => {
+             return Order.create({ carYear, carMake, carModel, carColor, carPlate, carVin, custName, custNumber, custSt, custCity, custState, custZip, orderSum, orderEst });
+            },
+         removeOrder: async (parent, { orderId }) => {
              return Order.findOneAndDelete({ _id: orderId });
          }
     }

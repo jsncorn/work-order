@@ -53,7 +53,7 @@ const orderSchema = new Schema({
         trim: true,
     },
     custNumber: {
-        type: Number,
+        type: String,
         required: 'You need a customer number',
         minlength: 7,
         maxlength: 10,
@@ -102,12 +102,12 @@ const orderSchema = new Schema({
         minlength: 1,
         maxlength: 1000,
     },
-    doneBy: {
-        type: String,
-        minlength: 1,
-        maxlength: 20,
-        // LATER, ADD A CALENDAR THEN FORMAT IT USING EXT LIB
-    }
+    // doneBy: {
+    //     type: String,
+    //     minlength: 1,
+    //     maxlength: 20,
+    //     // LATER, ADD A CALENDAR THEN FORMAT IT USING EXT LIB
+    // }
 });
 
 const Order = model('Order', orderSchema);
