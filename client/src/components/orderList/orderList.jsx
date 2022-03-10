@@ -1,16 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './orderList.scss'
 
 const orderList = ({ orders, title }) => {
     if (!orders.length) {
         return <h3>No work orders</h3>;
     }
-console.log("hellow")
-    console.log(orders);
 
     return (
-        <div>
-            <h3>{ title }</h3>
+        <div style={{paddingBottom: "20px"}}>
+            <h2>{ title }</h2>
             { orders &&
                 orders.map((order) => (
                     <div className='orderWrapper'>
@@ -18,9 +17,9 @@ console.log("hellow")
                         <h3 className='orderName'>{ order.custName }</h3>
                         <br/>
                         <div className='orderInfo'>
-                        <span>{ order.carYear } </span> 
-                        <span>{ order.carMake } </span>
-                        <span>{ order.carModel } </span>
+                        <span className='carInfo'>{ order.carYear } </span> 
+                        <span className='carInfo'>{ order.carMake } </span>
+                        <span className='carInfo'>{ order.carModel } </span>
                         </div>
                         <Link
                         className='button'

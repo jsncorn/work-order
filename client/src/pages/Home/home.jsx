@@ -2,7 +2,6 @@ import React from 'react';
 import OrderList from '../../components/orderList/orderList';
 import { useQuery } from '@apollo/client';
 import { QUERY_ORDERS } from '../../utils/queries';
-import './Home.scss'
 
 const Home = () => {
 
@@ -20,7 +19,7 @@ const Home = () => {
           ) : (
             <OrderList
               orders={orders}
-              title="orders!"
+              title="Current Active Work Orders"
             />
           )}
         </div>
