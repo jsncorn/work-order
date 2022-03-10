@@ -1,0 +1,32 @@
+.formElement {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 4px 0px;
+}
+
+.formButton {
+    display: flex;
+    flex-direction: row ;
+    justify-content: flex-end;
+    margin-right: 20px;
+    align-items: center;
+>button {
+    color: black;
+    background-color: yellow;
+    outline: none;
+    border-radius: 20px;
+    padding: 4px 6px;
+}
+}
+
+.signUpWrapper {
+    position: relative;
+    top: 70px;
+}
+
+.formButton>.link{
+    padding-right: 20px;
+    color: white;
+    text-decoration: none;
+}
