@@ -30,16 +30,60 @@ const orderSchema = new Schema({
     },
     carPlate: {
         type: String,
+        required: 'You need a plate number',
         minlength: 7,
         maxlength: 7,
         trim: true,
     },
     carVin: {
         type: String,
+        required: 'You need a VIN',
         minlength: 17,
         maxlength: 17,
         trim: true,
-    }
+    },
+    custName: {
+        type: String,
+        required: 'You need a customer name',
+        minlength: 1,
+        maxlength: 40,
+        trim: true,
+    },
+    custNumber: {
+        type: Number,
+        required: 'You need a customer number',
+        minlength: 7,
+        maxlength: 10,
+        trim: true,
+    },
+    custSt: {
+        type: String,
+        required: 'You need a customer street',
+        minlength: 1,
+        maxlength: 40,
+        trim: true,
+    },
+    custCity: {
+        type: String,
+        required: 'You need a customer city',
+        minlength: 1,
+        maxlength: 40,
+        trim: true,
+    },
+    custState: {
+        type: String,
+        required: 'You need a customer state',
+        minlength: 1,
+        maxlength: 40,
+        trim: true,
+    },
+    custZip: {
+        type: Number,
+        required: 'You need a customer ZIP code',
+        minlength: 5,
+        maxlength: 5,
+        trim: true,
+    },
 });
 
 const Order = model('Order', orderSchema);
