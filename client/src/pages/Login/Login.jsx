@@ -57,7 +57,7 @@ export default function Signup(props) {
           </div>
           <div className="formButton">
             <Link className='link' to="/signup">← Go to Signup</Link>
-            <button type="submit">Sign up</button>
+            <button type="submit">Login</button>
           </div>
         </form>
       </div>
