@@ -11,13 +11,14 @@ const resolvers = {
         order: async (parent, { orderId }) => {
             return Order.findOne({ _id: orderId });
         },
-        employee: async (_, _, context) => {
-            if (context.user) {
-                const emplyoee = await Employee.findById(context.employee.id).populate({
-                    path: 'orders',
-                    populate: 'custName'
+        employee: async (parent, args, context) => {
+            if (context.employee) {
+                const employee = await Employee.findById(context.employee.id).populate({
+                    path: 'orders.custName',
                 });
+                return employee;
             }
+            throw new AuthenticationError('not logged in')
         }
     },
     Mutation: {
@@ -27,12 +28,12 @@ const resolvers = {
         removeOrder: async (parent, { orderId }) => {
              return Order.findOneAndDelete({ _id: orderId });
          },
-         addEmployee: async (_, args) => {
+         addEmployee: async (parent, args) => {
              const employee = await Employee.create(args);
              const token = signToken(employee);
              return {token, employee};
          },
-         updateEmployee: async(_, args, context) => {
+         updateEmployee: async(parent, args, context) => {
              if (context.employee) {
                  return Employee.findByIdAndUpdate(context.employee.id, args, {
                      new: true
@@ -40,7 +41,7 @@ const resolvers = {
              }
              throw new AuthenticationError('not logged in')
          },
-         login: async(_, { email, password }) => {
+         login: async(parent, { email, password }) => {
              const employee = await Employee.findOne({ email });
 
              if(!user) {

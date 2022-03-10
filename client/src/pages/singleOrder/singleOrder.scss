@@ -8,5 +8,14 @@
     position: relative;
     border: 5px outset gray;
     text-align: center;
-    font-size: x-large;
+    font-size: large;
+}
+
+table .carTable{
+    display: table;
+    width: 100%;
+    float: right;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
 }

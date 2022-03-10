@@ -42,7 +42,7 @@ export const ADD_EMPLOYEE = gql`
         $email: String!
         $password: String!
     ) {
-        addUser(
+        addEmployee(
             firstName: $firstName
             lastName: $lastName
             email: $email

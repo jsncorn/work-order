@@ -24,6 +24,7 @@ type Order {
 type Query {
     orders: [Order]!
     order(orderId: ID!): Order
+    employee: Employee
 }
 
 type Employee {
@@ -31,7 +32,7 @@ type Employee {
     firstName: String
     lastName: String
     email: String
-    order: [{Order.custName}]
+    order: [Order]
 }
 
 type Auth {
@@ -83,12 +84,12 @@ type Mutation {
         password: String!
     ): Auth
 
-    updateUser(
+    updateEmployee(
         firstName: String
         lastName: String
         email: String
         password: String
-    ): User
+    ): Employee
 
     login(email: String!, password: String!): Auth
 }

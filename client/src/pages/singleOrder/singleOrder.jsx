@@ -21,7 +21,20 @@ const SingleOrder = () => {
     return (
         <div className="soMain">
             <div className="carSection">
-                <span>{order.carYear}</span>
+                <table> 
+                    <tr>
+                        <td width="20%">
+                            <div class="carTable">
+                                <scan>Car Year</scan>
+                            </div>
+                        </td>
+                        <td width="20%">
+                            <div class="carTable">
+                                <scan>{order.carYear}</scan>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>
     );
@@ -29,3 +42,18 @@ const SingleOrder = () => {
 }
 
 export default SingleOrder;
+
+/*carYear
+carMake
+carModel
+carColor
+carPlate
+carVin
+custName
+custNumber
+custSt
+custCity
+custState
+custZip
+orderSum
+orderEst*/
