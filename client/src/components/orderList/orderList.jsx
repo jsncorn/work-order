@@ -10,10 +10,11 @@ const orderList = ({ orders, title }) => {
     return (
         <div style={{paddingBottom: "20px"}}>
             <h2>{ title }</h2>
+            
             { orders &&
                 orders.map((order) => (
-                    <div className='orderWrapper'>
-                    <div className='orderDiv' key={ order._id }>
+                    <div className='orderWrapper' key={ order._id }>
+                    <div className='orderDiv'>
                         <h3 className='orderName'>{ order.custName }</h3>
                         <br/>
                         <div className='orderInfo'>

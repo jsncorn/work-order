@@ -8,6 +8,7 @@ import Topbar from './components/topBar/topBar';
 import Home from './pages/Home/Home';
 
 import { useState } from 'react';
+import SingleOrder from './pages/singleOrder/singleOrder';
 
 
 const client = new ApolloClient({
@@ -28,6 +29,8 @@ function App() {
             <Routes>
               <Route path='/' element={ <Home /> } />
               <Route path='/newform' element={ <OrderForm /> } />
+              <Route path="/orders/:orderId" element={<SingleOrder />} 
+              />
             </Routes>
           </div>
         </div>
