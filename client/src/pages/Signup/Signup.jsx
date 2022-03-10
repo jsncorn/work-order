@@ -34,7 +34,8 @@ export default function Signup(props) {
   }
 
   return (
-    <div>
+    <div className='acctWrap'>
+    <div className='signUpWrapper'>
     <h2>Employee Sign Up</h2>
     <form onSubmit={handleFormSubmit}>
     <div className="formElement">
@@ -74,11 +75,11 @@ export default function Signup(props) {
           />
         </div>
         <div className="formButton">
-          <button type="submit">Submit</button>
+          <Link className='link' to="/login">← Go to Login</Link>
+          <button type="submit">Sign up</button>
         </div>
       </form>
-
-
+    </div>
     </div>
   )
 }
