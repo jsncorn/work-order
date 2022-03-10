@@ -11,6 +11,7 @@ import Login from './pages/Login/Login';
 
 import { useState } from 'react';
 import SingleOrder from './pages/singleOrder/singleOrder';
+import Menu from './components/Menu/Menu';
 
 
 const client = new ApolloClient({
@@ -27,13 +28,14 @@ function App() {
       <Router>
         <div className="App flex-column justify-flex-start ">
           <Topbar menuOpen={ menuOpen } setMenuOpen={ setMenuOpen } />
+          <Menu menuOpen={ menuOpen } setMenuOpen={ setMenuOpen } />
           <div className='container'>
             <Routes>
               <Route path='/' element={ <Home /> } />
               <Route path='/newform' element={ <OrderForm /> } />
               <Route path="/orders/:orderId" element={<SingleOrder />} />
               <Route path='/signup' element={<Signup/>} />  
-              <Route path='login' element={<Login/>} />
+              <Route path='/login' element={<Login/>} />
             </Routes>
           </div>
         </div>
