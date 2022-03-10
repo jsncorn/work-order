@@ -1,0 +1,18 @@
+[
+    {
+        "carYear": "2011",
+        "carMake": "Audi",
+        "carModel": "S4",
+        "carColor": "SILVER",
+        "carPlate": "6MYT357",
+        "carVin": "1GKKVNEDXCJ260718",
+        "custName": "jason",
+        "custNumber": "5107105041",
+        "custSt": "12345 Address St",
+        "custCity": "City",
+        "custState": "State",
+        "custZip": "12345",
+        "orderSum": "this is a list of things that need to be done to the car",
+        "orderEst": "300"
+    }
+]
