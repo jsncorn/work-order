@@ -7,7 +7,9 @@ const resolvers = {
         orders: async () => {
             return Order.find().sort({ doneBy: -1 });
         },
-        
+        order: async (_, { orderId }) => {
+            return Order.findOne({ _id: orderId });
+        }
 
 
     }
