@@ -97,7 +97,7 @@ const orderSchema = new Schema({
         // multiple order summaries
     },
     orderEst: {
-        type: mongoose.Decimal128,
+        type: Number,
         required: 'You need an order estimate',
         minlength: 1,
         maxlength: 1000,
