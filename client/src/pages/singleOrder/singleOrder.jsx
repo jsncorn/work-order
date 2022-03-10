@@ -14,6 +14,8 @@ const SingleOrder = () => {
 
     const order = data?.order || {};
 
+    console.log(order)
+
     if (loading) {
         return <div> LOADING... </div>;
     }
@@ -21,19 +23,23 @@ const SingleOrder = () => {
     return (
         <div className="soMain">
             <div className="carSection">
-                <table> 
-                    <tr>
-                        <td width="20%">
-                            <div class="carTable">
-                                <scan>Car Year</scan>
-                            </div>
-                        </td>
-                        <td width="20%">
-                            <div class="carTable">
-                                <scan>{order.carYear}</scan>
-                            </div>
-                        </td>
-                    </tr>
+                <table>
+                { order.map(obj => {
+                        return (
+                            <tr>
+                                <td width="20%">
+                                    <div class="carTable">
+                                        <scan>Hi</scan>
+                                    </div>
+                                </td>
+                                <td width="20%">
+                                    <div class="carTable">
+                                        <scan>Bye</scan>
+                                    </div>
+                                </td>
+                            </tr>
+                        )
+                    }) }
                 </table>
             </div>
         </div>
