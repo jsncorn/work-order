@@ -20,7 +20,9 @@ const SingleOrder = () => {
 
     return (
         <div className="soMain">
-            { order.custName }
+            <div className="carSection">
+                <span>{order.carYear}</span>
+            </div>
         </div>
     );
 
