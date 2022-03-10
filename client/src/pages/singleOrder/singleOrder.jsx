@@ -18,25 +18,47 @@ const SingleOrder = () => {
         return <div> LOADING... </div>;
     }
 
+    const ordermap = {
+        "_id": "Order ID",
+        "carYear": "Year",
+        "carMake": "Make",
+        "carModel": "Model",
+        "carColor": "Color",
+        "carPlate": "License Plate",
+        "carVin": "VIN",
+        "custName": "Name",
+        "custNumber": "Phone Number",
+        "custSt": "Street",
+        "custCity": "City",
+        "custState": "State",
+        "custZip": "ZIP",
+        "orderSum": "Summary",
+        "orderEst": "Estimate"
+    };
+
     const CarTab = ({ data }) => {
         return (
-            <table border="1">
-                { Object.keys(data).map(key => {
-                    return (
-                        <tr>
-                            <td width="10%">
-                                <div class="carTable">
-                                    <scan>{key}</scan>
-                                </div>
-                            </td>
-                            <td width="20%">
-                                <div class="carTable">
-                                    <scan>{data[key]}</scan>
-                                </div>
-                            </td>
-                        </tr>
-                    )
-                }) }
+            <table border="1" >
+                <tbody>
+                    { Object.keys(data).map(key => {
+                        if (key !== "__typename") {
+                            return (
+                                <tr>
+                                    <td width="10%">
+                                        <div className="carTable">
+                                            <span>{ ordermap[key] }</span>
+                                        </div>
+                                    </td>
+                                    <td width="20%">
+                                        <div className="carTable">
+                                            <span>{ data[key] }</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            )
+                        }
+                    }) }
+                </tbody>
             </table>
         )
     }
@@ -52,18 +74,3 @@ const SingleOrder = () => {
 }
 
 export default SingleOrder;
-
-/*carYear
-carMake
-carModel
-carColor
-carPlate
-carVin
-custName
-custNumber
-custSt
-custCity
-custState
-custZip
-orderSum
-orderEst*/
