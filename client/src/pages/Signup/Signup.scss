@@ -1,0 +1,12 @@
+.formElement {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 4px 0px;
+}
+
+.formButton {
+    display: flex;
+    flex-direction: row ;
+    justify-content: flex-end;
+}
