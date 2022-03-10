@@ -14,7 +14,7 @@
 }
 
 .navMenu.active {
-    top: 60px;
+    top: 50px;
 }
 
 ul {
@@ -34,6 +34,6 @@ a {
     margin: 20px;
 }
 
-a:hover {
+.navMenu > a:hover {
     font-weight: bold;
 }
