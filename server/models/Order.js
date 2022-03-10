@@ -103,8 +103,9 @@ const orderSchema = new Schema({
         maxlength: 1000,
     },
     doneBy: {
-        type: Date,
-        default: Date.now,
+        type: String,
+        minlength: 1,
+        maxlength: 20,
         // LATER, ADD A CALENDAR THEN FORMAT IT USING EXT LIB
     }
 });

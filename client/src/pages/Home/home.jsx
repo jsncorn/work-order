@@ -4,14 +4,31 @@ import { useQuery } from '@apollo/client';
 import { QUERY_ORDERS } from '../../utils/queries';
 
 const Home = () => {
-    
-const {loading, data} = useQuery(QUERY_ORDERS);
-const orders = data?.orders || [];
+
+  const { loading, data } = useQuery(QUERY_ORDERS);
+  const orders = data?.orders || [];
 
   return (
-    <div>
-        <OrderList orders={orders} />
-    </div>
+    <main>
+      <div className="flex-row justify-center">
+        <div
+          className=""
+          style={{ border: '1px dotted #1a1a1a' }}
+        >
+          sample text
+        </div>
+        <div className="">
+          {loading ? (
+            <div>Loading...</div>
+          ) : (
+            <OrderList
+              orders={orders}
+              title="orders!"
+            />
+          )}
+        </div>
+      </div>
+    </main>
   )
 }
 

@@ -26,7 +26,7 @@ function App() {
           <Topbar menuOpen={ menuOpen } setMenuOpen={ setMenuOpen } />
           <div className='container'>
             <Routes>
-            <Route path='/' element={ <Home /> } />
+              <Route path='/' element={ <Home /> } />
               <Route path='/newform' element={ <OrderForm /> } />
             </Routes>
           </div>
