@@ -1,4 +1,7 @@
-const { Schema, model } = require('mongoose');
+const {
+    Schema,
+    model
+} = require('mongoose');
 
 const orderSchema = new Schema({
     carYear: {
@@ -84,6 +87,26 @@ const orderSchema = new Schema({
         maxlength: 5,
         trim: true,
     },
+    orderSum: {
+        type: String,
+        required: 'You need an order summary',
+        minlength: 1,
+        maxlength: 1000,
+        trim: true,
+        // maybe in the future, make this an array so we can have
+        // multiple order summaries
+    },
+    orderEst: {
+        type: mongoose.Decimal128,
+        required: 'You need an order estimate',
+        minlength: 1,
+        maxlength: 1000,
+    },
+    doneBy: {
+        type: Date,
+        default: Date.now,
+        // LATER, ADD A CALENDAR THEN FORMAT IT USING EXT LIB
+    }
 });
 
 const Order = model('Order', orderSchema);
