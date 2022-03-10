@@ -13,19 +13,24 @@ console.log("hellow")
             <h3>{ title }</h3>
             { orders &&
                 orders.map((order) => (
-                    <div key={ order._id }>
-                        <h3>{ order.custName }</h3>
-                        <br />
-                        <span>{ order.carYear }</span> 
+                    <div className='orderWrapper'>
+                    <div className='orderDiv' key={ order._id }>
+                        <h3 className='orderName'>{ order.custName }</h3>
+                        <br/>
+                        <div className='orderInfo'>
+                        <span>{ order.carYear } </span> 
                         <span>{ order.carMake } </span>
-                        <span>{ order.carModel }</span>
+                        <span>{ order.carModel } </span>
+                        </div>
                         <Link
+                        className='button'
                             to={ `/orders/${order._id}` }
                         >
-                            order button.
+                            view order
                         </Link>
-                    </div>
 
+                    </div>
+                    </div>
                 )) }
         </div>
     )

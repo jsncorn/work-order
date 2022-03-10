@@ -1,5 +1,39 @@
 .home {
     top: 70px;
-    background-color: red;
+    background-color: lightgrey;
     position: relative; 
+}
+
+.orderName {
+    width: 50%;
+    margin-left: 30px;
+}
+
+.orderInfo {
+width: 50%;
+}
+
+.orderDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    border: 1px solid black;
+    margin-bottom: 4px;
+}
+
+.orderWrapper {
+    display:flex;
+    justify-content: center;
+}
+
+.button {
+    background-color: yellow;
+    border-radius: 20px;
+    text-align: center;
+    width: 100px;
+    padding: 8px;
+    text-decoration: none;
+    color: black;
+    margin-right: 30px;
 }
