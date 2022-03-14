@@ -1,28 +1,9 @@
-.formElement {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 4px 0px;
-}
-
-.formButton {
-    display: flex;
-    flex-direction: row ;
-    justify-content: flex-end;
-    margin-right: 20px;
-    align-items: center;
-    >button {
-        color: black;
-        background-color: yellow;
-        border: none;
-        border-radius: 20px;
-        padding: 12px;
-    }
-}
 
 .loginWrapper {
     position: relative;
     top: 70px;
+    background-color: #b3b3b3;
+    padding-bottom: 15px;
 }
 
 .formButton>.link{

@@ -37,7 +37,7 @@ function Login(props) {
     <div className='acctWrap'>
       <div className='loginWrapper'>
         <h2>Employee Log in</h2>
-        <form onSubmit={ handleFormSubmit }>
+        <form onSubmit={ handleFormSubmit } style={{width:"50%", margin:"auto"}}>
           <div className="formElement">
             <label htmlFor="email">Email:</label>
             <input
@@ -56,7 +56,7 @@ function Login(props) {
               onChange={ handleChange }
             />
           </div>
-          <div className="formButton">
+        <div className="formButton">
             <Link className='link' to="/signup">← Go to Signup</Link>
             <button type="submit">Login</button>
           </div>
@@ -66,6 +66,7 @@ function Login(props) {
             </div>
           ) : null }
         </form>
+
       </div>
     </div>
   )
