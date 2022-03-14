@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './orderForm.scss'
 import { ADD_ORDER } from '../../utils/mutations';
 import { useMutation } from '@apollo/client';
+import Auth from '../../utils/Auth';
 
 export default function Orderform(props) {
 
@@ -54,7 +55,7 @@ workSum: '', workEst: ''})
         });
         const token = mutationResponse.data.addOrder.token;
         // no login for now
-        // Auth.login(token);
+        Auth.login(token);
         setFormMsg('Info successfully sent');
         } catch (error) {
             console.log(error);
