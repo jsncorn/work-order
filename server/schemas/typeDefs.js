@@ -5,7 +5,7 @@ const {
 const typeDefs = gql `
 type Order {
     _id: ID
-    carYear: Int
+    carYear: String
     carMake: String
     carModel: String
     carColor: String
@@ -16,9 +16,9 @@ type Order {
     custSt: String
     custCity: String
     custState: String
-    custZip: Int
+    custZip: String
     orderSum: String
-    orderEst: Int
+    orderEst: String
 }
 
 type Query {
@@ -42,7 +42,7 @@ type Auth {
 
 type Mutation {
     addOrder(
-        carYear: Int!,
+        carYear: String!,
         carMake: String!,
         carModel: String!,
         carColor: String!,
@@ -53,13 +53,13 @@ type Mutation {
         custSt: String!,
         custCity: String!,
         custState: String!,
-        custZip: Int!,
+        custZip: String!,
         orderSum: String!,
-        orderEst: Int!,
+        orderEst: String!,
     ): Order
 
     updateOrder(
-        carYear: Int,
+        carYear: String,
         carMake: String,
         carModel: String,
         carColor: String,
@@ -70,9 +70,9 @@ type Mutation {
         custSt: String,
         custCity: String,
         custState: String,
-        custZip: Int,
+        custZip: String,
         orderSum: String,
-        orderEst: Int,
+        orderEst: String,
     ): Order
 
     removeOrder(orderId: ID!): Order

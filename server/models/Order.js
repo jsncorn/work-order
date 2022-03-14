@@ -5,7 +5,7 @@ const {
 
 const orderSchema = new Schema({
     carYear: {
-        type: Number,
+        type: String,
         required: 'You need a car year',
         minlength: 4,
         maxlength: 4,
@@ -81,7 +81,7 @@ const orderSchema = new Schema({
         trim: true,
     },
     custZip: {
-        type: Number,
+        type: String,
         required: 'You need a customer ZIP code',
         minlength: 5,
         maxlength: 5,
@@ -97,7 +97,7 @@ const orderSchema = new Schema({
         // multiple order summaries
     },
     orderEst: {
-        type: Number,
+        type: String,
         required: 'You need an order estimate',
         minlength: 1,
         maxlength: 1000,

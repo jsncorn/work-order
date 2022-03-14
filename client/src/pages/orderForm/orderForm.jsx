@@ -9,7 +9,7 @@ export default function Orderform(props) {
 carModel: '', carColor: '', carPlate: '', carVin: '', customerName: '',
 customerNum: '', customerSt: '', customerCity: '', customerState: '', customerZip:'',
 workSum: '', workEst: ''})
-    const [addOrder] = useMutation(ADD_ORDER);
+    const [ addOrder ] = useMutation(ADD_ORDER);
 
     const handleFormSubmit = async (e) => {
         e.preventDefault();
@@ -21,14 +21,31 @@ workSum: '', workEst: ''})
                 carColor: formState.carColor,
                 carPlate: formState.carPlate,
                 carVin: formState.carVin,
-                customerName: formState.customerName,
-                customerSt: formState.customerSt,
-                customerCity: formState.customerCity,
-                customerState: formState.customerState,
-                customerZip: formState.customerZip,
-                workSum: formState.workSum,
-                workEst: formState.workEst
+                custName: formState.customerName,
+                custNumber: formState.customerNum,
+                custSt: formState.customerSt,
+                custCity: formState.customerCity,
+                custState: formState.customerState,
+                custZip: formState.customerZip,
+                orderSum: formState.orderSum,
+                orderEst: formState.orderEst
             }
+            /*variables: {
+                "carYear": "2016",
+                "carMake":"maserati",
+                "carModel":"ghibli",
+                "carColor":"black",
+                "carPlate":"plate12",
+                "carVin":"1G1PE5SB2E7134527",
+                "custName":"jason three",
+                "custNumber":"5101234567",
+                "custSt":"123 Street St",
+                "custCity":"City",
+                "custState":"State",
+                "custZip": "12345",
+                "orderSum":"sumarry foaisdjusiaas",
+                "orderEst": "123"
+            }*/
         });
         const token = mutationResponse.data.addOrder.token;
         // no login for now
@@ -40,7 +57,7 @@ workSum: '', workEst: ''})
         setFormState({
             ...formState,
             [name]: value,
-        })
+        });
     }
     
     return (
@@ -55,34 +72,34 @@ workSum: '', workEst: ''})
                         <div className='carLeft'>
                             <div className='col-12'>
                                 <label>Year:
-                                    <input name="carYear" onChange={handleChange}/>
+                                    <input name="carYear" id="carYear" onChange={handleChange}/>
                                 </label>
                             </div>
                             <div className='col-12'>
                                 <label>Make:
-                                    <input name="carMake" onChange={handleChange}/>
+                                    <input name="carMake" id='carMake' onChange={handleChange}/>
                                 </label>
                             </div>
                             <div className='col-12'>
                                 <label>Model:
-                                    <input name="carModel" onChange={handleChange}/>
+                                    <input name="carModel" id="carModel" onChange={handleChange}/>
                                 </label>
                             </div>
                         </div>
                         <div className='carRight'>
                             <div className='col-12'>
                                 <label>Color:
-                                    <input name="carColor" onChange={handleChange}/>
+                                    <input name="carColor" id="carColor" onChange={handleChange}/>
                                 </label>
                             </div>
                             <div className='col-12'>
                                 <label>License Plate #:
-                                    <input name="carPlate" onChange={handleChange}/>
+                                    <input name="carPlate" id="carPlate" onChange={handleChange}/>
                                 </label>
                             </div>
                             <div className='col-12'>
                                 <label>VIN #:
-                                    <input name="carVin" onChange={handleChange}/>
+                                    <input name="carVin" id="carVin" onChange={handleChange}/>
                                 </label>
                             </div>
                         </div>
@@ -93,34 +110,34 @@ workSum: '', workEst: ''})
                         <div className='customerLeft'>
                             <div className='col-12'>
                                 <label>Name:
-                                    <input name="customerName" onChange={handleChange}/>
+                                    <input name="customerName" id="customerName" onChange={handleChange}/>
                                 </label>
                             </div>
                             <div className='col-12'>
                                 <label>Number:
-                                    <input name="customerNum" onChange={handleChange}/>
+                                    <input name="customerNum" id="customerNum" onChange={handleChange}/>
                                 </label>
                             </div>
                         </div>
                         <div className='customerRight'>
                             <div className='col-12'>
                                 <label>Street:
-                                    <input name="customerSt" onChange={handleChange}/>
+                                    <input name="customerSt" id="customerSt" onChange={handleChange}/>
                                 </label>
                             </div>
                             <div className='col-12'>
                                 <label>City:
-                                    <input name="customerCity" onChange={handleChange}/>
+                                    <input name="customerCity" id="customerCity" onChange={handleChange}/>
                                 </label>
                             </div>
                             <div className='col-12'>
                                 <label>State:
-                                    <input name="customerState" onChange={handleChange}/>
+                                    <input name="customerState" id="customerState" onChange={handleChange}/>
                                 </label>
                             </div>
                             <div className='col-12'>
                                 <label>ZIP:
-                                    <input name="customerZip" onChange={handleChange}/>
+                                    <input name="customerZip" id="customerZip" onChange={handleChange}/>
                                 </label>
                             </div>
                         </div>
@@ -130,14 +147,14 @@ workSum: '', workEst: ''})
                         <div className='workLeft'>
                             <div className='col-12'>
                                 <label>Summary:
-                                    <textarea name="workSum"  onChange={handleChange}/>
+                                    <textarea name="orderSum" id="orderSum" onChange={handleChange}/>
                                 </label>
                             </div>
                         </div>
                         <div className='workRight'>
                             <div className='col-12'>
                                 <label>Estimate:
-                                    <input name="workEst" onChange={handleChange}/>
+                                    <input name="orderEst" id="orderEst" onChange={handleChange}/>
                                 </label>
                             </div>
                         </div>

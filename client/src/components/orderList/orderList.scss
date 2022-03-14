@@ -27,15 +27,26 @@ width: 50%;
     justify-content: center;
 }
 
-.button {
-    background-color: yellow;
+.viewBtn {
+    background-color: rgb(6, 255, 6);
     border-radius: 20px;
     text-align: center;
-    width: 100px;
+    width: 50px;
     padding: 8px;
     text-decoration: none;
     color: black;
-    margin-right: 30px;
+    margin: 0px 10px;
+}
+
+.delBtn {
+    background-color: rgb(255, 56, 56);
+    border-radius: 20px;
+    text-align: center;
+    width: 50px;
+    padding: 8px;
+    text-decoration: none;
+    color: black;
+    margin: 0px 10px;
 }
 
 .carInfo {

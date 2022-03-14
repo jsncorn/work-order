@@ -1,3 +1,4 @@
+import { useMutation } from '@apollo/client';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './orderList.scss'
@@ -6,6 +7,16 @@ const orderList = ({ orders, title }) => {
     if (!orders.length) {
         return <h3>No work orders</h3>;
     }
+
+const [removeOrder ] = useMutation(REMOVE_ORDER)
+
+const handleSubmit = async (e) => {
+    const mutationResponse = await removeOrder({
+        variables: {
+            _id: orders._id
+        }
+    })
+}
 
     return (
         <div style={{paddingBottom: "20px"}}>
@@ -23,12 +34,17 @@ const orderList = ({ orders, title }) => {
                         <span className='carInfo'>{ order.carModel } </span>
                         </div>
                         <Link
-                        className='button'
+                        className='viewBtn'
                             to={ `/orders/${order._id}` }
                         >
-                            view order
+                            view
                         </Link>
-
+                        <button
+                        className='delBtn'
+                            onSubmit={handleSubmit}
+                        >
+                            delete
+                        </button>
                     </div>
                     </div>
                 )) }
