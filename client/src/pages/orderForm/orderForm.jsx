@@ -3,6 +3,7 @@ import './orderForm.scss'
 import { ADD_ORDER } from '../../utils/mutations';
 import { useMutation } from '@apollo/client';
 import Auth from '../../utils/Auth';
+import {Link} from 'react-router-dom';
 
 export default function Orderform(props) {
 
@@ -68,9 +69,19 @@ workSum: '', workEst: ''})
             [name]: value,
         });
     }
+
+    if(!Auth.loggedIn()) {
+        return (
+            <div className="home" style={{display:'flex', justifyContent:'center', flexDirection:'column'}}>
+        <h3 style={{marginBottom:'0px'}}>Please log in to create a new form</h3>
+        <hr/>
+        <button className='loginBtn'><Link className='link loginLink' to="/login">Go to Login →</Link></button>
+        </div>
+        )
+    }
     
     return (
-        <div className='wrapper'>
+        <div className='wrapper home'>
 
             <h3>Create New Order</h3>
             <form className='flex-row justify-center justify-space-between-md align-center' onSubmit={ handleFormSubmit }>
