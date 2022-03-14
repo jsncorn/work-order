@@ -27,7 +27,7 @@ const resolvers = {
              return Order.create({ carYear, carMake, carModel, carColor, carPlate, carVin, custName, custNumber, custSt, custCity, custState, custZip, orderSum, orderEst });
             },
         removeOrder: async (parent, { orderId }) => {
-             return Order.findOneAndDelete({ _id: orderId }, args, { new: true});
+             return Order.findOneAndDelete({ _id: orderId });
          },
          addEmployee: async (parent, args) => {
              const employee = await Employee.create(args);
