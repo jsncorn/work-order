@@ -1,7 +1,7 @@
 .home {
     top: 70px;
     background-color: lightgrey;
-    position: relative; 
+    position: relative;
 }
 
 .orderName {
@@ -10,7 +10,7 @@
 }
 
 .orderInfo {
-width: 50%;
+    width: 50%;
 }
 
 .orderDiv {
@@ -23,7 +23,7 @@ width: 50%;
 }
 
 .orderWrapper {
-    display:flex;
+    display: flex;
     justify-content: center;
 }
 
@@ -57,4 +57,29 @@ width: 50%;
 h2 {
     text-align: center;
     padding-top: 20px;
+}
+
+h3 {
+    text-align: center;
+    padding: 20px;
+}
+
+.loginLink {
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    position: relative;
+    margin: auto;
+}
+
+.loginBtn {
+    width: 100px;
+    background-color: yellow;
+    border: none;
+    padding: 7px;
+    border-radius: 20px;
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+    margin-bottom: 40px;
 }

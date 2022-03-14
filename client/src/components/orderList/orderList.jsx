@@ -1,17 +1,29 @@
 import { useMutation } from '@apollo/client';
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import './orderList.scss'
 import { REMOVE_ORDER } from '../../utils/mutations';
+import Auth from '../../utils/Auth';
 
 export default function OrderList({ orders, title }) {
 
 
     const [removeOrder] = useMutation(REMOVE_ORDER);
 
-    if (!orders.length) {
+    if(!Auth.loggedIn()) {
+        return (
+            <div style={{display:'flex', justifyContent:'center', flexDirection:'column'}}>
+        <h3 style={{marginBottom:'0px'}}>Please log in to see the orders</h3>
+        <hr/>
+        <button className='loginBtn'><Link className='link loginLink' to="/login">Go to Login →</Link></button>
+        </div>
+        )
+    }
+
+    else if (!orders.length) {
         return <h3>No work orders</h3>;
     };
+
     return (
         <div style={ { paddingBottom: "20px" } }>
             <h2>{ title }</h2>
