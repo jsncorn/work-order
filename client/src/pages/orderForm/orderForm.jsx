@@ -144,7 +144,7 @@ export default function Orderform(props) {
                             </div>
                             <div className='col-12'>
                                 <label>Number:
-                                    <input name="customerNum" id="customerNum" onChange={ handleChange } />
+                                    <input type="tel " pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$" name="customerNum" id="customerNum" onChange={ handleChange } />
                                 </label>
                             </div>
                         </div>
