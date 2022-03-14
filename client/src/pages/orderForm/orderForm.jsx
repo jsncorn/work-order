@@ -58,7 +58,7 @@ workSum: '', workEst: ''})
         setFormMsg('Info successfully sent');
         } catch (error) {
             console.log(error);
-            setFormMsg(error);
+            setFormMsg('There was a validation error in one field, please look over it again.');
         }
     }
 
