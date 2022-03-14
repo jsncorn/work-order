@@ -53,9 +53,7 @@ workSum: '', workEst: ''})
                 "orderEst": "123"
             }*/
         });
-        const token = mutationResponse.data.addOrder.token;
-        // no login for now
-        Auth.login(token);
+
         setFormMsg('Info successfully sent');
         } catch (error) {
             console.log(error);
