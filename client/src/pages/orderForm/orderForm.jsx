@@ -16,7 +16,9 @@ workSum: '', workEst: ''})
 
 
     const handleFormSubmit = async (e) => {
-
+        if(!Auth.loggedIn) {
+            console.log("User is not logged in")
+        }
         try {
         e.preventDefault();           
         const mutationResponse = await addOrder({
