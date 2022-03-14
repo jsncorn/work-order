@@ -55,3 +55,10 @@ export const ADD_EMPLOYEE = gql`
         }
     }
 `;
+
+export const REMOVE_ORDER = gql`
+mutation removeOrder ($orderId: ID!){
+    removeOrder(orderId: $orderId) {
+        custName
+    }
+}`
