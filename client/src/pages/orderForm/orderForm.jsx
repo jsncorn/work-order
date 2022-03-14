@@ -94,12 +94,12 @@ export default function Orderform(props) {
     return (
         <div className='wrapper home'>
 
-            <h3>New Order</h3>
+            <h2 style={ { paddingTop: '30px',paddingBottom: '0px'} }>New Order</h2>
             <form className={'flex-row justify-center justify-space-between-md align-center' + {formVisibility}} onSubmit={ handleFormSubmit }>
                 <div className='left'>
 
                     <div className='carDiv'>
-                        <h3 style={ { width: '100%' } }>Car Information</h3>
+                        <h3 style={ { width: '100%'} }>Car Information</h3>
                         <div className='carLeft'>
                             <div className='col-12'>
                                 <label>Year:
