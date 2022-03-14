@@ -10,11 +10,15 @@ carModel: '', carColor: '', carPlate: '', carVin: '', customerName: '',
 customerNum: '', customerSt: '', customerCity: '', customerState: '', customerZip:'',
 workSum: '', workEst: ''})
     const [ addOrder ] = useMutation(ADD_ORDER);
+    const [formMsg, setFormMsg ] = useState('');
+
 
     const handleFormSubmit = async (e) => {
-        e.preventDefault();
+
+        try {
+        e.preventDefault();           
         const mutationResponse = await addOrder({
-            /*variables: {
+            variables: {
                 carYear: formState.carYear,
                 carMake: formState.carMake,
                 carModel: formState.carModel,
@@ -29,8 +33,9 @@ workSum: '', workEst: ''})
                 custZip: formState.customerZip,
                 orderSum: formState.orderSum,
                 orderEst: formState.orderEst
-            }*/
-            variables: {
+            }
+
+            /*variables: {
                 "carYear": "2016",
                 "carMake":"maserati",
                 "carModel":"ghibli",
@@ -45,11 +50,16 @@ workSum: '', workEst: ''})
                 "custZip": "12345",
                 "orderSum":"sumarry foaisdjusiaas",
                 "orderEst": "123"
-            }
+            }*/
         });
         const token = mutationResponse.data.addOrder.token;
         // no login for now
         // Auth.login(token);
+        setFormMsg('Info successfully sent');
+        } catch (error) {
+            console.log(error);
+            setFormMsg(error);
+        }
     }
 
     const handleChange = (e) => {
@@ -161,6 +171,9 @@ workSum: '', workEst: ''})
                         <div>
                             <button type='submit'>Submit</button>
                         </div>
+<div>
+    {formMsg}
+</div>
 
                     </div>
                 </div>
