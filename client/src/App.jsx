@@ -5,9 +5,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.scss';
 import OrderForm from './pages/orderForm/orderForm';
 import Topbar from './components/topBar/topBar';
-import Home from './pages/Home/Home';
-import Signup from './pages/Signup/Signup';
-import Login from './pages/Login/Login';
+import Home from './pages/Home/Home.jsx';
+import Signup from './pages/Signup/Signup.jsx';
+import Login from './pages/Login/Login.jsx';
 
 import { useState } from 'react';
 import SingleOrder from './pages/singleOrder/singleOrder';
