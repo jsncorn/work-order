@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './orderForm.scss'
+import { ADD_ORDER } from '../../utils/mutations';
+import { useMutation } from '@apollo/client';
 
-const Orderform = () => {
+export default function Orderform(props) {
+
+    const [formState, setFormstate] = useState({ carYear: '', carMake: '',
+carModel: '', carColor: '', carPlate: '', carVin: '', customerName: '',
+customerNum: '', customerSt: '', customerCity: '', customerState: '', customerZip:'',
+workSum: '', workEst: ''})
+    const [addOrder] = useMutation(ADD_ORDER);
 
     const handleFormSubmit = async (e) => {
         e.preventDefault();
+
     }
 
     return (
@@ -114,4 +123,4 @@ const Orderform = () => {
     );
 }
 
-export default Orderform;
+

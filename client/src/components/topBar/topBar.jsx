@@ -1,12 +1,13 @@
 import React from 'react';
 import './topBar.scss';
+import { Link } from 'react-router-dom';
 
 export default function Topbar({ menuOpen, setMenuOpen }) {
     return (
       <div className={"topbar " + (menuOpen && "active")}>
         <div className='wrapper'>
           <div className="left">
-            <a href="#intro" className='logo'>SHOP NAME</a>
+            <Link to="/" href="#home" className='logo'>SHOP NAME</Link>
           </div>
           <div className="right">
             <div className="menu" onClick={() => setMenuOpen(!menuOpen)}>
