@@ -17,7 +17,6 @@ export default function Orderform(props) {
     const [formMsg, setFormMsg] = useState('');
     const [color, setColor] = useState('');
     const [afterSubmit, setAfterSubmit] = useState('hidden');
-    const [formVisibility, setFormVisibility] = useState('shown');
 
 
     const handleFormSubmit = async (e) => {
@@ -65,7 +64,6 @@ export default function Orderform(props) {
             setFormMsg('Info successfully sent');
             setColor('green');
             setAfterSubmit('');
-            setFormVisibility('hidden');
         } catch (error) {
             console.log(error);
             setFormMsg('There was a validation error in one field, please look over it again.');
@@ -95,10 +93,10 @@ export default function Orderform(props) {
         <div className='wrapper home'>
 
             <h2 style={ { paddingTop: '30px',paddingBottom: '0px'} }>New Order</h2>
-            <form className={'flex-row justify-center justify-space-between-md align-center' + {formVisibility}} onSubmit={ handleFormSubmit }>
+            <form className='flex-row justify-center justify-space-between-md align-center' onSubmit={ handleFormSubmit }>
                 <div className='left'>
 
-                    <div className='carDiv'>
+                    <div className='carDiv '>
                         <h3 style={ { width: '100%'} }>Car Information</h3>
                         <div className='carLeft'>
                             <div className='col-12'>
@@ -191,7 +189,7 @@ export default function Orderform(props) {
                         </div>
                         <div className='formSubmit'>
                             <span className={color}>{ formMsg }</span>
-                            <span className={afterSubmit}>Click here to make another order.</span>
+                            <span className={afterSubmit} onClick={() => window.location.reload()}>Click here to make another order.</span>
                             <br/>
                             <button type='submit'>Submit</button>
                             
