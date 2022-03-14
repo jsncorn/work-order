@@ -5,13 +5,13 @@ import Auth from '../../utils/Auth';
 import { LOGIN } from '../../utils/mutations';
 import './Login.scss'
 
-export default function Signup(props) {
+function Login(props) {
 
   const [formState, setFormState] = useState({ email: '', password: '' });
-  const [login, {error}] = useMutation(LOGIN);
+  const [login, { error }] = useMutation(LOGIN);
 
-  const handleFormSubmit = async (e) => {
-    e.preventDefault();
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
     try {
       const mutationResponse = await login({
         variables: { email: formState.email, password: formState.password },
@@ -21,10 +21,10 @@ export default function Signup(props) {
     } catch (e) {
       console.log(e);
     }
-  }
+  };
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
+  const handleChange = (event) => {
+    const { name, value } = event.target;
     setFormState({
       ...formState,
       [name]: value,
@@ -59,13 +59,15 @@ export default function Signup(props) {
             <Link className='link' to="/signup">← Go to Signup</Link>
             <button type="submit">Login</button>
           </div>
-          {error ? (
-          <div>
-            <p className="error-text">The provided credentials are incorrect</p>
-          </div>
-        ) : null}
+          { error ? (
+            <div>
+              <p className="error-text">The provided credentials are incorrect</p>
+            </div>
+          ) : null }
         </form>
       </div>
     </div>
   )
 }
+
+export default Login;

@@ -25,14 +25,14 @@ mutation addOrder($carYear: Int!, $carMake: String!, $carModel: String!, $carCol
 `;
 
 export const LOGIN = gql`
-mutation login($email: String!, $password: String!) {
+  mutation login($email: String!, $password: String!) {
     login(email: $email, password: $password) {
-        token
-        employee {
-            _id
-        }
+      token
+      employee {
+        _id
+      }
     }
-}
+  }
 `;
 
 export const ADD_EMPLOYEE = gql`

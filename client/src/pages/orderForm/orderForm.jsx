@@ -103,9 +103,6 @@ const Orderform = () => {
                                 <label>Estimate:
                                     <input name="workEst" />
                                 </label>
-                                <label>Done by:
-                                    <input name="employeeWork" />
-                                </label>
                             </div>
                         </div>
                     </div>

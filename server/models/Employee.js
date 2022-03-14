@@ -33,6 +33,7 @@ const employeeSchema = new Schema({
 employeeSchema.pre('save', async function (next) {
   if (this.isNew || this.isModified('password')) {
     const saltRounds = 10;
+    console.log(this.password)
     this.password = await bcrypt.hash(this.password, saltRounds);
   }
 

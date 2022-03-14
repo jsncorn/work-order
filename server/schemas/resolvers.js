@@ -44,14 +44,13 @@ const resolvers = {
          },
          login: async(parent, { email, password }) => {
              const employee = await Employee.findOne({ email });
-
              if(!employee) {
                  throw new AuthenticationError('wrong login info');
              }
 
              const correctPw = await employee.isCorrectPassword(password);
              if (!correctPw) {
-                 throw new AuthenticationError('wrong password');
+                 throw new AuthenticationError('sadsadsad wrong password');
              }
 
              const token = signToken(employee);
