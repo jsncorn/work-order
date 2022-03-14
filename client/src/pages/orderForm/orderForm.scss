@@ -1,17 +1,18 @@
 :root {}
 
-/* ADD MEDIA QUERY:::: CARLEFT AND CUSTOMER LEFT BECOMES 50%*/
+/* ADD MEDIA QUERY:::: EVERYTHING BECOMES FLEX DIRECTION COLUMN*/
 form>.left {
-    background-color: red;
+    background-color: #d3d3d3;
 
     >.carDiv, .workDiv {
         background-color: inherit;
         display: flex;
         flex-wrap: wrap;
-        padding: 10px 8px;
+        padding: 0px 8px;
         text-align: left;
+        flex-direction: row;
         >.carLeft, .workLeft {
-            width: 40%;
+            width: 50%;
 
         }
 
@@ -21,18 +22,18 @@ form>.left {
     }
 
     >.customerDiv {
-        background-color: green;
+        background-color: #d3d3d3;
     }
 
     >.customerDiv {
         background-color: inherit;
         display: flex;
         flex-wrap: wrap;
-        padding: 10px 8px;
+        padding: 0px 8px;
         text-align: left;
 
         >.customerLeft {
-            width: 40%;
+            width: 50%;
 
         }
 
@@ -42,7 +43,7 @@ form>.left {
     }
 
     >.customerDiv {
-        background-color: green;
+        background-color: #d3d3d3;
     }
 }
 
@@ -63,11 +64,48 @@ label {
 
 textarea {
     resize: none;
-    height: 100px;
+    height: 75px;
 }
 
 .home {
     top: 70px;
     background-color: lightgrey;
     position: relative;
+}
+
+.formSubmit {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    margin: auto;
+    
+    >button {
+        border: none;
+        background-color: yellow;
+        padding: 8px;
+        border-radius: 20px;  
+        width: 70px;
+        text-align: center;
+        margin: auto;
+        font-size: 15px;
+        margin-bottom: 12px;
+    }
+    >span {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+}
+
+.green {
+    color: rgb(43, 199, 43);
+}
+
+.red {
+    color: red;
+}
+
+.green, .red {
+    font-weight: bold;
 }
