@@ -141,6 +141,10 @@ workSum: '', workEst: ''})
                                 </label>
                             </div>
                         </div>
+                        <div>
+                            <button type='submit'>Submit</button>
+                        </div>
+
                     </div>
                 </div>
             </form>
