@@ -27,7 +27,7 @@ useEffect(() => {
                 <li onClick={() => setMenuOpen(false)}>
                     <Link to='/'>Work Orders</Link>
                 </li>
-                <li onClick={() => setMenuOpen(false)}>
+                <li className={logout} onClick={() => setMenuOpen(false)}>
                     <Link to='/newform'>New Order</Link>
                 </li>
                 <li className={ logged } onClick={() => setMenuOpen(false)}>
