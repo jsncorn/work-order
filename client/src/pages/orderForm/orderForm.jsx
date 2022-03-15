@@ -189,7 +189,7 @@ export default function Orderform(props) {
                         </div>
                         <div className='formSubmit'>
                             <span className={color}>{ formMsg }</span>
-                            <span className={afterSubmit} onClick={() => window.location.reload()}>Click here to make another order.</span>
+                            <span className={afterSubmit}><Link to='/newform'>Click here to make another order.</Link></span>
                             <br/>
                             <button type='submit'>Submit</button>
                             
