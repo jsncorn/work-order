@@ -7,7 +7,7 @@ const {signToken} = require('../utils/auth')
 const resolvers = {
     Query: {
         orders: async () => {
-            return Order.find().sort({ carYear: -1 });
+            return Order.find().sort({ dateCreated: +1 });
         },
         order: async (parent, { orderId }) => {
             return Order.findOne({ _id: orderId });
