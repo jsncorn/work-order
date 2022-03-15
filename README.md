@@ -12,6 +12,7 @@ done - all without paper.
 ## Badges
 
 Badges from: [shields.io](https://shields.io/)
+
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs) ![Badge for GitHub repo top language](https://img.shields.io/github/languages/top/jsncorn/work-order?style=flat&logo=appveyor) ![Badge for GitHub last commit](https://img.shields.io/github/last-commit/jsncorn/work-order?style=flat&logo=appveyor)
 ## Deployment
 
