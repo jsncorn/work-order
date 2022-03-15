@@ -21,23 +21,29 @@ useEffect(() => {
     checkLoggedIn()
 })
 
+const handleOnClick = () => {
+    setMenuOpen(false);
+    window.location.reload();
+}
+
     return (
         <div className={"navMenu " + (menuOpen && "active")}>
             <ul>
-                <li onClick={() => setMenuOpen(false)}>
+                <li onClick={handleOnClick}>
                     <Link to='/'>Work Orders</Link>
                 </li>
-                <li className={logout} onClick={() => setMenuOpen(false)}>
+                <li className={logout} onClick={handleOnClick}>
                     <Link to='/newform'>New Order</Link>
                 </li>
-                <li className={ logged } onClick={() => setMenuOpen(false)}>
+                <li className={ logged } onClick={handleOnClick}>
                     <Link to='/login'>Login</Link>
                 </li>
-                <li className={logout} onClick={() => setMenuOpen(false)}>
+                <li className={logout} onClick={handleOnClick}>
                     <Link to='/signup'>Create Account</Link>
                 </li>
                 <li className={logout} onClick={() => { 
                     setMenuOpen(false);
+                    window.location.reload();
                     Auth.logout();
                 }}>
                     <a href='/'>Logout</a>
