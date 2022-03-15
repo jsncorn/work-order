@@ -58,23 +58,6 @@ type Mutation {
         orderEst: String!,
     ): Order
 
-    updateOrder(
-        carYear: String,
-        carMake: String,
-        carModel: String,
-        carColor: String,
-        carPlate: String,
-        carVin: String,
-        custName: String,
-        custNumber: String,
-        custSt: String,
-        custCity: String,
-        custState: String,
-        custZip: String,
-        orderSum: String,
-        orderEst: String,
-    ): Order
-
     removeOrder(orderId: ID!): Order
 
     addEmployee(
