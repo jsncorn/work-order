@@ -33,7 +33,8 @@ const SingleOrder = () => {
         "custState": "State",
         "custZip": "ZIP",
         "orderSum": "Summary",
-        "orderEst": "Estimate"
+        "orderEst": "Estimate",
+        "dateCreated": "Date Created"
     };
 
     const CarTab = ({ data }) => {
