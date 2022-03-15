@@ -21,11 +21,6 @@ useEffect(() => {
     checkLoggedIn()
 })
 
-const handleOnClick = () => {
-    setMenuOpen(false);
-    window.location.reload();
-}
-
 return (
     <div className={"navMenu " + (menuOpen && "active")}>
         <ul>

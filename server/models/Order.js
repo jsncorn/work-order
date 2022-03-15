@@ -107,8 +107,21 @@ const orderSchema = new Schema({
     //     // LATER, ADD A CALENDAR THEN FORMAT IT USING EXT LIB
     // },
     dateCreated: {
-        type: Date,
-        default: Date.now,
+        type: String,
+        get() {
+            const dater = new Date;
+            //const dates = Date.parse(dater);
+            //const dates = new Date(dates);
+            console.dir(dater);
+            return `${dater.toLocaleString([], {
+              month: "long",
+              day: "numeric",
+              year: "numeric",
+              hour: "numeric",
+              minute: "numeric",
+              hour12: true,
+            })}`;
+          },
     }
 });
 
