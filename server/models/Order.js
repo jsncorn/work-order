@@ -112,7 +112,6 @@ const orderSchema = new Schema({
             const dater = new Date;
             //const dates = Date.parse(dater);
             //const dates = new Date(dates);
-            console.dir(dater);
             return `${dater.toLocaleString([], {
               month: "long",
               day: "numeric",

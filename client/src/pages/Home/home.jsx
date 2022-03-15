@@ -8,7 +8,6 @@ const Home = () => {
   const { loading, data } = useQuery(QUERY_ORDERS);
   const orders = data?.orders || [];
   //
-  console.log(orders);
 
   return (
     <main>
