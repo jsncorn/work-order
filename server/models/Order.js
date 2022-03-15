@@ -2,6 +2,8 @@ const {
     Schema,
     model
 } = require('mongoose');
+const mongoose = require('mongoose');
+mongoose.plugin(require('mongoose-nanoid'), 6);
 
 const orderSchema = new Schema({
     carYear: {
