@@ -105,7 +105,11 @@ const orderSchema = new Schema({
     //     minlength: 1,
     //     maxlength: 20,
     //     // LATER, ADD A CALENDAR THEN FORMAT IT USING EXT LIB
-    // }
+    // },
+    dateCreated: {
+        type: Date,
+        default: Date.now,
+    }
 });
 
 const Order = model('Order', orderSchema);
