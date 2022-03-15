@@ -57,7 +57,6 @@ function Login(props) {
             />
           </div>
         <div className="formButton">
-            <Link className='link' to="/signup">← Go to Signup</Link>
             <button type="submit">Login</button>
           </div>
           { error ? (
