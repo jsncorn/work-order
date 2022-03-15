@@ -33,6 +33,11 @@ Deployed Link: [Heroku](https://github.com/jsncorn/work-order/deployments/activi
 ## Installation
 
 Install work-order with npm: must have mongoDB
+Original seeded login will be 
+```
+admin@admin.com
+password
+```
 
 ```bash
   npm install 
