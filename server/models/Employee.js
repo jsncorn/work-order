@@ -20,6 +20,7 @@ const employeeSchema = new Schema({
     type: String,
     required: true,
     unique: true,
+    validate: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/
   },
   password: {
     type: String,
