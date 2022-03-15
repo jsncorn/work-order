@@ -42,6 +42,7 @@ query getSingleOrder($orderId: ID!) {
         custZip
         orderSum
         orderEst
+        dateCreated
     }
 }
 `;

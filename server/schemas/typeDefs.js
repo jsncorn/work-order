@@ -19,6 +19,7 @@ type Order {
     custZip: String
     orderSum: String
     orderEst: String
+    dateCreated: String
 }
 
 type Query {
