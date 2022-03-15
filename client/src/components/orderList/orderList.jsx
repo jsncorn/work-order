@@ -49,7 +49,6 @@ export default function OrderList({ orders, title }) {
                                 className='delBtn'
                                 onClick={ () => {
                                     window.location.reload();
-                                    console.log('removed');
                                     removeOrder({
                                         variables: {
                                             orderId: order._id

@@ -7,8 +7,7 @@ const orderSchema = new Schema({
     carYear: {
         type: String,
         required: 'You need a car year',
-        minlength: 4,
-        maxlength: 4,
+        validate: /^(19|20)\d{2}$/,
         trim: true
     },
     carMake: {
@@ -55,9 +54,8 @@ const orderSchema = new Schema({
     custNumber: {
         type: String,
         required: 'You need a customer number',
-        minlength: 7,
-        maxlength: 10,
         trim: true,
+        validate:/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/
     },
     custSt: {
         type: String,
@@ -83,9 +81,8 @@ const orderSchema = new Schema({
     custZip: {
         type: String,
         required: 'You need a customer ZIP code',
-        minlength: 5,
-        maxlength: 5,
         trim: true,
+        validate: /^[0-9]{5}(?:-[0-9]{4})?$/
     },
     orderSum: {
         type: String,
@@ -99,8 +96,7 @@ const orderSchema = new Schema({
     orderEst: {
         type: String,
         required: 'You need an order estimate',
-        minlength: 1,
-        maxlength: 1000,
+        validate: /^[0-9]*$/
     },
     // doneBy: {
     //     type: String,

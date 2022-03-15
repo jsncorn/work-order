@@ -34,14 +34,6 @@ const resolvers = {
              const token = signToken(employee);
              return {token, employee};
          },
-         updateEmployee: async(parent, args, context) => {
-             if (context.employee) {
-                 return Employee.findByIdAndUpdate(context.employee.id, args, {
-                     new: true
-                 })
-             }
-             throw new AuthenticationError('not logged in')
-         },
          login: async(parent, { email, password }) => {
              const employee = await Employee.findOne({ email });
              if(!employee) {

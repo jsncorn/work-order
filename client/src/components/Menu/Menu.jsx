@@ -39,7 +39,6 @@ useEffect(() => {
                 <li className={logout} onClick={() => { 
                     setMenuOpen(false);
                     Auth.logout();
-                    console.log('logged out.')
                 }}>
                     <a href='/'>Logout</a>
                 </li>
