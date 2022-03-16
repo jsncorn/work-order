@@ -12,6 +12,11 @@ const SingleOrder = () => {
         variables: { orderId: orderId }
     });
 
+    function dateFormat(obj) {
+        var date = new Date(+obj);
+        return date.toLocaleString([], {month: "long", day: "numeric", year: "numeric", hour: "numeric", minute: "numeric", hour12: true});
+    }
+
     const order = data?.order || {};
 
     if (loading) {
@@ -42,7 +47,7 @@ const SingleOrder = () => {
             <table border="1" >
                 <tbody>
                     { Object.keys(data).map(key => {
-                        if (key !== "__typename") {
+                        if (key !== "__typename" && key !== "dateCreated") {
                             return (
                                 <tr>
                                     <td width="10%">
@@ -53,6 +58,21 @@ const SingleOrder = () => {
                                     <td width="20%">
                                         <div className="carTable">
                                             <span>{ data[key] }</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            )
+                        } else if (key === "dateCreated") {
+                            return (
+                                <tr>
+                                    <td width="10%">
+                                        <div className="carTable">
+                                            <span>{ ordermap[key] }</span>
+                                        </div>
+                                    </td>
+                                    <td width="20%">
+                                        <div className="carTable">
+                                            <span>{ dateFormat(data[key]) }</span>
                                         </div>
                                     </td>
                                 </tr>

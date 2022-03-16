@@ -108,19 +108,7 @@ const orderSchema = new Schema({
     // },
     dateCreated: {
         type: String,
-        get() {
-            const dater = new Date;
-            //const dates = Date.parse(dater);
-            //const dates = new Date(dates);
-            return `${dater.toLocaleString([], {
-              month: "long",
-              day: "numeric",
-              year: "numeric",
-              hour: "numeric",
-              minute: "numeric",
-              hour12: true,
-            })}`;
-          },
+        default: Date.now
     }
 });
 
