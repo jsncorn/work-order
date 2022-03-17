@@ -30,6 +30,7 @@ export default function Orderform(props) {
                     carYear: formState.carYear,
                     carMake: formState.carMake,
                     carModel: formState.carModel,
+                    carMileage: formState.carMileage,
                     carColor: formState.carColor,
                     carPlate: formState.carPlate,
                     carVin: formState.carVin,
@@ -88,12 +89,12 @@ export default function Orderform(props) {
     return (
         <div className='wrapper home'>
 
-            <h2 style={ { paddingTop: '30px',paddingBottom: '0px'} }>New Order</h2>
+            <h2 style={ { paddingTop: '30px', paddingBottom: '0px' } }>New Order</h2>
             <form className='flex-row justify-center justify-space-between-md align-center' onSubmit={ handleFormSubmit }>
                 <div className='left'>
 
                     <div className='carDiv '>
-                        <h3 style={ { width: '100%'} }>Car Information</h3>
+                        <h3 style={ { width: '100%' } }>Car Information</h3>
                         <div className='carLeft'>
                             <div className='col-12'>
                                 <label>Year:
@@ -108,6 +109,11 @@ export default function Orderform(props) {
                             <div className='col-12'>
                                 <label>Model:
                                     <input name="carModel" id="carModel" onChange={ handleChange } />
+                                </label>
+                            </div>
+                            <div className='col-12'>
+                                <label>Mileage:
+                                    <input name="carMileage" id="carMileage" onChange={ handleChange } />
                                 </label>
                             </div>
                         </div>
@@ -138,10 +144,12 @@ export default function Orderform(props) {
                                     <input name="customerName" id="customerName" onChange={ handleChange } />
                                 </label>
                             </div>
-                            <div className='col-12'>
-                                <label>Number:
-                                    <input type="tel " pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$" name="customerNum" id="customerNum" onChange={ handleChange } />
-                                </label>
+                        </div>    
+                            <div className='customerRight'>
+                                <div className='col-12'>
+                                    <label>Number:
+                                        <input type="tel " pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$" name="customerNum" id="customerNum" onChange={ handleChange } />
+                                    </label>
                             </div>
                         </div>
                     </div>
@@ -162,11 +170,11 @@ export default function Orderform(props) {
                             </div>
                         </div>
                         <div className='formSubmit'>
-                            <span className={color}>{ formMsg }</span>
-                            <span className={afterSubmit}><Link to='/newform'>Click here to make another order.</Link></span>
-                            <br/>
+                            <span className={ color }>{ formMsg }</span>
+                            <span className={ afterSubmit }><Link to='/newform'>Click here to make another order.</Link></span>
+                            <br />
                             <button type='submit'>Submit</button>
-                            
+
                         </div>
 
                     </div>

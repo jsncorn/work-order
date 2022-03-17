@@ -8,6 +8,7 @@ type Order {
     carYear: String
     carMake: String
     carModel: String
+    carMileage: String
     carColor: String
     carPlate: String
     carVin: String
@@ -42,6 +43,7 @@ type Mutation {
         carYear: String!,
         carMake: String!,
         carModel: String!,
+        carMileage: String!,
         carColor: String!,
         carPlate: String!,
         carVin: String!,

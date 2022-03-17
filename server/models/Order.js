@@ -26,6 +26,11 @@ const orderSchema = new Schema({
         maxlength: 25,
         trim: true,
     },
+    carMileage: {
+        type: String,
+        trim: true,
+        validate: /^[0-9]*$/
+    },
     carColor: {
         type: String,
         minlength: 1,

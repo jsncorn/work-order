@@ -9,6 +9,7 @@ query getOrders {
         carYear
         carMake
         carModel
+        carMileage
         carColor
         carPlate
         carVin
@@ -27,6 +28,7 @@ query getSingleOrder($orderId: ID!) {
         carYear
         carMake
         carModel
+        carMileage
         carColor
         carPlate
         carVin

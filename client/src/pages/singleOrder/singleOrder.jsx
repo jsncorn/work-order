@@ -31,12 +31,9 @@ const SingleOrder = () => {
         "carColor": "Color",
         "carPlate": "License Plate",
         "carVin": "VIN",
+        "carMileage": "Mileage",
         "custName": "Name",
         "custNumber": "Phone Number",
-        "custSt": "Street",
-        "custCity": "City",
-        "custState": "State",
-        "custZip": "ZIP",
         "orderSum": "Summary",
         "orderEst": "Estimate",
         "dateCreated": "Date Created"
