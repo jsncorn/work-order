@@ -1,6 +1,6 @@
 const { AuthenticationError } = require('apollo-server-express');
 const {
-    Order, Employee
+    Order, Employee, Labor
 } = require('../models');
 const {signToken} = require('../utils/auth')
 
@@ -20,7 +20,10 @@ const resolvers = {
                 return employee;
             }
             throw new AuthenticationError('not logged in')
-        }
+        },
+        labors: async () => {
+            return Labor.find()
+        },
     },
     Mutation: {
         addOrder: async (parent, { carYear, carMake, carModel, carMileage, carColor, carPlate, carVin, custName, custNumber, orderSum, orderEst, deliverDate }) => {
@@ -29,12 +32,18 @@ const resolvers = {
         removeOrder: async (parent, { orderId }) => {
              return Order.findOneAndDelete({ _id: orderId });
          },
-         addEmployee: async (parent, args) => {
+        addEmployee: async (parent, args) => {
              const employee = await Employee.create(args);
              const token = signToken(employee);
              return {token, employee};
          },
-         login: async(parent, { email, password }) => {
+        addLabor: async (parent, {description, hours, cost}) => {
+            return Labor.create({description, hours, cost}) 
+         },
+         removeLabor: async(parent, { laborId }) => {
+             return Labor.findOneAndDelete({_id: laborId})
+        },
+        login: async(parent, { email, password }) => {
              const employee = await Employee.findOne({ email });
              if(!employee) {
                  

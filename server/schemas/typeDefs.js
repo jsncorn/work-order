@@ -20,10 +20,18 @@ type Order {
     deliverDate: String
 }
 
+type Labor {
+    description: String
+    hours: String
+    cost: String
+}
+
 type Query {
     orders: [Order]!
     order(orderId: ID!): Order
     employee: Employee
+    labor: Labor 
+    labors: [Labor]!
 }
 
 type Employee {
@@ -56,6 +64,8 @@ type Mutation {
     ): Order
 
     removeOrder(orderId: ID!): Order
+    
+    removeLabor(laborId: ID!): Labor
 
     addEmployee(
         firstName: String!
@@ -70,6 +80,12 @@ type Mutation {
         email: String
         password: String
     ): Employee
+
+    addLabor(
+        description: String!
+        hours: String!
+        cost: String!
+    ): Labor
 
     login(email: String!, password: String!): Auth
 }
