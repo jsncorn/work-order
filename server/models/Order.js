@@ -59,33 +59,6 @@ const orderSchema = new Schema({
         trim: true,
         validate:/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/
     },
-    custSt: {
-        type: String,
-        required: 'You need a customer street',
-        minlength: 1,
-        maxlength: 40,
-        trim: true,
-    },
-    custCity: {
-        type: String,
-        required: 'You need a customer city',
-        minlength: 1,
-        maxlength: 40,
-        trim: true,
-    },
-    custState: {
-        type: String,
-        required: 'You need a customer state',
-        minlength: 1,
-        maxlength: 40,
-        trim: true,
-    },
-    custZip: {
-        type: String,
-        required: 'You need a customer ZIP code',
-        trim: true,
-        validate: /^[0-9]{5}(?:-[0-9]{4})?$/
-    },
     orderSum: {
         type: String,
         required: 'You need an order summary',

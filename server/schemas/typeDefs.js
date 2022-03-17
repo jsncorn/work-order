@@ -13,10 +13,6 @@ type Order {
     carVin: String
     custName: String
     custNumber: String
-    custSt: String
-    custCity: String
-    custState: String
-    custZip: String
     orderSum: String
     orderEst: String
     dateCreated: String
@@ -51,10 +47,6 @@ type Mutation {
         carVin: String!,
         custName: String!,
         custNumber: String!,
-        custSt: String!,
-        custCity: String!,
-        custState: String!,
-        custZip: String!,
         orderSum: String!,
         orderEst: String!,
     ): Order

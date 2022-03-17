@@ -14,10 +14,6 @@ query getOrders {
         carVin
         custName
         custNumber
-        custSt
-        custCity
-        custState
-        custZip
         orderSum
         orderEst
     }
@@ -36,10 +32,6 @@ query getSingleOrder($orderId: ID!) {
         carVin
         custName
         custNumber
-        custSt
-        custCity
-        custState
-        custZip
         orderSum
         orderEst
         dateCreated

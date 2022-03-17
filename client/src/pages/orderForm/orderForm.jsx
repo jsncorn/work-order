@@ -35,10 +35,6 @@ export default function Orderform(props) {
                     carVin: formState.carVin,
                     custName: formState.customerName,
                     custNumber: formState.customerNum,
-                    custSt: formState.customerSt,
-                    custCity: formState.customerCity,
-                    custState: formState.customerState,
-                    custZip: formState.customerZip,
                     orderSum: formState.orderSum,
                     orderEst: formState.orderEst
                 }
@@ -145,28 +141,6 @@ export default function Orderform(props) {
                             <div className='col-12'>
                                 <label>Number:
                                     <input type="tel " pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$" name="customerNum" id="customerNum" onChange={ handleChange } />
-                                </label>
-                            </div>
-                        </div>
-                        <div className='customerRight'>
-                            <div className='col-12'>
-                                <label>Street:
-                                    <input name="customerSt" id="customerSt" onChange={ handleChange } />
-                                </label>
-                            </div>
-                            <div className='col-12'>
-                                <label>City:
-                                    <input name="customerCity" id="customerCity" onChange={ handleChange } />
-                                </label>
-                            </div>
-                            <div className='col-12'>
-                                <label>State:
-                                    <input name="customerState" id="customerState" onChange={ handleChange } />
-                                </label>
-                            </div>
-                            <div className='col-12'>
-                                <label>ZIP:
-                                    <input name="customerZip" id="customerZip" onChange={ handleChange } />
                                 </label>
                             </div>
                         </div>
