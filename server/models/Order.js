@@ -87,6 +87,9 @@ const orderSchema = new Schema({
     dateCreated: {
         type: String,
         default: Date.now
+    },
+    deliverDate: {
+        type: String,
     }
 });
 

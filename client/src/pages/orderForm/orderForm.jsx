@@ -37,7 +37,8 @@ export default function Orderform(props) {
                     custName: formState.customerName,
                     custNumber: formState.customerNum,
                     orderSum: formState.orderSum,
-                    orderEst: formState.orderEst
+                    orderEst: formState.orderEst,
+                    deliverDate: formState.deliverDate
                 }
 
                 /*variables: {
@@ -166,6 +167,11 @@ export default function Orderform(props) {
                             <div className='col-12'>
                                 <label>Estimate:
                                     <input name="orderEst" id="orderEst" onChange={ handleChange } />
+                                </label>
+                            </div>
+                            <div className='col-12'>
+                                <label>Deliver By:
+                                    <input type="datetime-local" name="deliverDate" id="deliverDate" onChange={ handleChange } />
                                 </label>
                             </div>
                         </div>

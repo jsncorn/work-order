@@ -17,6 +17,12 @@ const SingleOrder = () => {
         return date.toLocaleString([], {month: "long", day: "numeric", year: "numeric", hour: "numeric", minute: "numeric", hour12: true});
     }
 
+    function dateParse(obj) {
+        var date = Date.parse(obj);
+        var dater = new Date(date);
+        return dater.toLocaleString([], {month: "long", day: "numeric", year: "numeric", hour: "numeric", minute: "numeric", hour12: true});
+    }
+
     const order = data?.order || {};
 
     if (loading) {
@@ -36,7 +42,8 @@ const SingleOrder = () => {
         "custNumber": "Phone Number",
         "orderSum": "Summary",
         "orderEst": "Estimate",
-        "dateCreated": "Date Created"
+        "dateCreated": "Date Created",
+        "deliverDate": "Deliver By"
     };
 
     const CarTab = ({ data }) => {
@@ -44,7 +51,7 @@ const SingleOrder = () => {
             <table border="1" >
                 <tbody>
                     { Object.keys(data).map(key => {
-                        if (key !== "__typename" && key !== "dateCreated") {
+                        if (key !== "__typename" && key !== "dateCreated" && key !== "deliverDate") {
                             return (
                                 <tr>
                                     <td width="10%">
@@ -70,6 +77,21 @@ const SingleOrder = () => {
                                     <td width="20%">
                                         <div className="carTable">
                                             <span>{ dateFormat(data[key]) }</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            )
+                        } else if (key === "deliverDate") {
+                            return (
+                                <tr>
+                                    <td width="10%">
+                                        <div className="carTable">
+                                            <span>{ ordermap[key] }</span>
+                                        </div>
+                                    </td>
+                                    <td width="20%">
+                                        <div className="carTable">
+                                            <span>{ dateParse(data[key]) }</span>
                                         </div>
                                     </td>
                                 </tr>

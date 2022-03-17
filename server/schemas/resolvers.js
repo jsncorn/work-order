@@ -23,8 +23,8 @@ const resolvers = {
         }
     },
     Mutation: {
-        addOrder: async (parent, { carYear, carMake, carModel, carMileage, carColor, carPlate, carVin, custName, custNumber, orderSum, orderEst  }) => {
-             return Order.create({ carYear, carMake, carModel, carMileage, carColor, carPlate, carVin, custName, custNumber, orderSum, orderEst });
+        addOrder: async (parent, { carYear, carMake, carModel, carMileage, carColor, carPlate, carVin, custName, custNumber, orderSum, orderEst, deliverDate }) => {
+             return Order.create({ carYear, carMake, carModel, carMileage, carColor, carPlate, carVin, custName, custNumber, orderSum, orderEst, deliverDate });
             },
         removeOrder: async (parent, { orderId }) => {
              return Order.findOneAndDelete({ _id: orderId });

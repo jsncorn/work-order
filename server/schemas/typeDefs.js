@@ -17,6 +17,7 @@ type Order {
     orderSum: String
     orderEst: String
     dateCreated: String
+    deliverDate: String
 }
 
 type Query {
@@ -51,6 +52,7 @@ type Mutation {
         custNumber: String!,
         orderSum: String!,
         orderEst: String!,
+        deliverDate: String!
     ): Order
 
     removeOrder(orderId: ID!): Order

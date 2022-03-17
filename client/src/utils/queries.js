@@ -17,6 +17,7 @@ query getOrders {
         custNumber
         orderSum
         orderEst
+        deliverDate
     }
 }
 `;
@@ -37,6 +38,7 @@ query getSingleOrder($orderId: ID!) {
         orderSum
         orderEst
         dateCreated
+        deliverDate
     }
 }
 `;
